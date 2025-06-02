@@ -25,13 +25,10 @@ heading.addEventListener("mouseenter", () => {
 
 // Click SFX for Navbar + Pagedown + Logo + project list items
 document.addEventListener("DOMContentLoaded", () => {
-    const navImages = document.querySelectorAll(".nav_img, .logo, .page_down, .project_item a");
+    const clickableElements = document.querySelectorAll(".nav_img, .logo, .page_down, .project_item a, .bongos");
     const clickSound = document.getElementById("sfx_ui_press");
 
-    // Create audio context
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-
-    // Load audio buffer from the <audio> element's source
     let audioBuffer;
 
     fetch("audio/sfx_ui_press.wav")
@@ -41,25 +38,40 @@ document.addEventListener("DOMContentLoaded", () => {
             audioBuffer = buffer;
         });
 
-    navImages.forEach(img => {
-        img.addEventListener("click", () => {
+    clickableElements.forEach(elem => {
+        elem.addEventListener("click", (e) => {
             if (!audioBuffer) return;
 
-            const source = audioContext.createBufferSource();
-            source.buffer = audioBuffer;
+            // Check if the element is a link or inside one
+            const link = elem.closest("a");
 
-            // Add slight random pitch variation
-            source.playbackRate.value = 0.3 + Math.random() * 0.8; // decimal numbers define range
+            if (link) {
+                e.preventDefault(); // stop the immediate navigation
+                playSound(audioContext, audioBuffer);
 
-            source.connect(audioContext.destination);
-            source.start(0);
+                // continue navigation
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 150); // time of delay
+            } else {
+                playSound(audioContext, audioBuffer);
+            }
         });
     });
+
+    function playSound(ctx, buffer) {
+        const source = ctx.createBufferSource();
+        source.buffer = buffer;
+        source.playbackRate.value = 0.3 + Math.random() * 0.8;
+        source.connect(ctx.destination);
+        source.start(0);
+    }
 });
+
 
 // Pagedoll SFX
 document.addEventListener("DOMContentLoaded", () => {
-    const pagedolls = document.querySelectorAll(".pagedoll");
+    const pagedolls = document.querySelectorAll(".pagedoll, .wallclock");
     const pingSound = document.getElementById("sfx_ping");
 
     pagedolls.forEach(doll => {
@@ -83,6 +95,45 @@ document.addEventListener("DOMContentLoaded", () => {
             hiLongSound.play().catch(err => {
                 console.warn("Playback prevented:", err);
             });
+        });
+    });
+});
+
+
+// hotbar animations (hover wiggle and click shake)
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".bongos, .wallclock");
+
+    elements.forEach(elem => {
+        // Hover wiggle animation
+        elem.addEventListener("mouseenter", () => {
+            gsap.to(elem, {
+                duration: 1.5,
+                rotation: 5,
+                scale: 1.1,
+                ease: "elastic.out(1, 0.3)"
+            });
+        });
+
+        elem.addEventListener("mouseleave", () => {
+            gsap.to(elem, {
+                duration: 0.5,
+                rotation: 0,
+                scale: 1,
+                ease: "power2.out"
+            });
+        });
+
+        // Click shake animation
+        elem.addEventListener("click", () => {
+            gsap.timeline()
+                .to(elem, { scale: 1.3, duration: 0.1, ease: "power1.out" })
+                .to(elem, { x: -5, duration: 0.05 })
+                .to(elem, { x: 5, duration: 0.05 })
+                .to(elem, { x: -3, duration: 0.05 })
+                .to(elem, { x: 3, duration: 0.05 })
+                .to(elem, { x: 0, duration: 0.05 })
+                .to(elem, { scale: 1, duration: 0.1, ease: "power1.in" });
         });
     });
 });

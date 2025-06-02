@@ -226,9 +226,10 @@ aside{
     display:flex;
     position:relative;
     top:15vh;
-    transition: top 0.5s ease;
-    pointer-events: none;
     opacity:0;
+    transition: top 0.5s ease, opacity 0.1s ease-in;
+    pointer-events: none;
+
 }
 
 #page_heading:hover {
@@ -237,10 +238,12 @@ aside{
 }
 
 #page_heading:hover + #lucy_jumpscare {
-    top:0vh;
+    top:0;
     opacity: 1;
-
 }
+
+
+
 
 
 main {
@@ -338,10 +341,10 @@ section#portfolio_section>h2 {
 .project_item img {
     justify-self: center;
     display: flex;
-    padding-bottom:30px;
     max-width:90%;
     height:auto;
-    padding: 2%;
+    margin-bottom: 3vh;
+    padding: 5%;
 }
 
 .project_item img:hover {
@@ -376,6 +379,48 @@ footer p {
 
 
 }
+
+
+.hotbar_container {
+    display:flex;
+    justify-content: space-evenly;
+    overflow:hidden;
+    height:25vh;
+}
+
+.hotbar_container div {
+    display:flex;
+    justify-self: center;
+    align-self: center;
+    width:7vw;
+    height:10vh;
+    margin:5vh;
+
+}
+
+.bongos {
+    background:url(images/dk_bongos.webp) no-repeat center center;
+    background-size:contain;
+    display: block;
+    width:7vw;
+    height:10vh;
+}
+
+.wallclock {
+    background:url(images/wall_clock.webp) no-repeat center center;
+    background-size:contain;
+    display: block;
+    width:7vw;
+    height:10vh;
+}
+
+/*
+.bongos:hover {
+    zoom:110%;
+    align-self: center;
+
+}*/
+
 
 footer>ul{
     display: flex;

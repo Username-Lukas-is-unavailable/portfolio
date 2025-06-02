@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // continue navigation
                 setTimeout(() => {
                     window.location.href = link.href;
-                }, 150); // time of delay
+                }, 160); // time of delay
             } else {
                 playSound(audioContext, audioBuffer);
             }
@@ -102,14 +102,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // hotbar animations (hover wiggle and click shake)
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".bongos, .wallclock");
+    const elements = document.querySelectorAll(".bongos, .project_link, .wallclock, .logo, .social_link");
 
     elements.forEach(elem => {
-        // Hover wiggle animation
+        // Hover animation with random rotation
         elem.addEventListener("mouseenter", () => {
+            const randomRotation = Math.random() < 0.5 ? 5 : -5;
+
             gsap.to(elem, {
                 duration: 1.5,
-                rotation: 5,
+                rotation: randomRotation,
                 scale: 1.1,
                 ease: "elastic.out(1, 0.3)"
             });
@@ -137,3 +139,44 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+// pagedoll squash and stretch
+document.addEventListener("DOMContentLoaded", () => {
+    const dolls = document.querySelectorAll(".pagedoll");
+
+    dolls.forEach(doll => {
+        doll.addEventListener("mouseenter", () => {
+            gsap.to(doll, {
+                duration: 1,
+                scaleY: 1.1,
+                ease: "elastic.out(1, 0.3)"
+            });
+        });
+
+        doll.addEventListener("mouseleave", () => {
+            gsap.to(doll, {
+                duration: 0.4,
+                scaleY: 1,
+                ease: "power2.out"
+            });
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".social_link");
+    const boingSound = document.getElementById("sfx_boing");
+
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            boingSound.currentTime = 0; // rewind to start
+            boingSound.play().catch(err => {
+                console.warn("Sound playback blocked:", err);
+            });
+        });
+    });
+});
+
+

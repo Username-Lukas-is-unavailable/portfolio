@@ -194,6 +194,9 @@ aside{
     background:url(./images/page_up.png) no-repeat center center;
     background-size:contain;
 
+    display: inline-block;
+    transform-origin: bottom;
+
 }
 
 .pagedoll:hover {
@@ -278,6 +281,7 @@ section#project_overview>div{
     display:flex;
     flex-direction:column;
     font-family:"Comic Sans MS", serif;
+    min-height:40vh; /*Adjust based on needs to prevent resizing of grid elements*/
 }
 
 section#project_overview>h2 {
@@ -288,6 +292,10 @@ section#project_overview>h2 {
     text-align:center;
     padding-bottom:4vh;
     font-size:6vh;
+}
+
+#projects {
+    scroll-margin-top: 20vh;
 }
 
 section#portfolio_section {
@@ -454,4 +462,27 @@ svg {
     }
 }
 
+.socials a {
+    color:white;
+    text-decoration:none;
+}
 
+.socials a:hover {
+    color:#d80085;
+}
+
+.socials {
+    display:flex;
+    justify-content: space-evenly;
+    margin-top:2vh;
+    margin-bottom:5vh;
+    gap:2vw;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.footer_social_separator {
+    font-size:25px;
+}

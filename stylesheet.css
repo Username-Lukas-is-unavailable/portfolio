@@ -298,6 +298,11 @@ section#project_overview>h2 {
     scroll-margin-top: 20vh;
 }
 
+#portfolio_section {
+    scroll-margin-top: 10vh;
+
+}
+
 section#portfolio_section {
     width:80%;
     justify-self: center;

@@ -86,13 +86,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Logo in navbar SFX
 document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelectorAll(".logo");
+    const logoElements = document.querySelectorAll(".logo");
     const hiLongSound = document.getElementById("sfx_hi_long");
+    const yaySound = document.getElementById("sfx_yay");
 
-    logo.forEach(logo => {
+    logoElements.forEach(logo => {
         logo.addEventListener("mouseenter", () => {
-            hiLongSound.currentTime = 0; // rewind to start
-            hiLongSound.play().catch(err => {
+            // Randomly choose which sound to play
+            const soundToPlay = Math.random() < 0.5 ? hiLongSound : yaySound;
+
+            soundToPlay.currentTime = 0; // rewind to start
+            soundToPlay.play().catch(err => {
                 console.warn("Playback prevented:", err);
             });
         });
@@ -175,6 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
             boingSound.play().catch(err => {
                 console.warn("Sound playback blocked:", err);
             });
+
+
         });
     });
 });

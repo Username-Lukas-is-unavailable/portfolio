@@ -84,25 +84,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Logo in navbar SFX
+// Logo (in navbar) SFX
 document.addEventListener("DOMContentLoaded", () => {
     const logoElements = document.querySelectorAll(".logo");
-    const hiLongSound = document.getElementById("sfx_hi_long");
-    const yaySound = document.getElementById("sfx_yay");
+
+    // List of cool and awesome sfx options
+    const sounds = {
+        sfx_hi_long: document.getElementById("sfx_hi_long"),
+        sfx_yay: document.getElementById("sfx_yay"),
+        sfx_uhm: document.getElementById("sfx_uhm"),
+        sfx_gremlin: document.getElementById("sfx_gremlin"),
+        sfx_bleh: document.getElementById("sfx_bleh"),
+        sfx_balloonboy: document.getElementById("sfx_balloonboy"),
+        sfx_clown: document.getElementById("sfx_clown"),
+        sfx_meow: document.getElementById("sfx_meow"),
+        sfx_mewo: document.getElementById("sfx_mewo"),
+        sfx_mlp: document.getElementById("sfx_mlp"),
+        sfx_party: document.getElementById("sfx_party"),
+        sfx_oh: document.getElementById("sfx_oh"),
+        sfx_laugh: document.getElementById("sfx_laugh"),
+        sfx_quack: document.getElementById("sfx_quack"),
+        sfx_sneeze: document.getElementById("sfx_sneeze"),
+        sfx_yippee: document.getElementById("sfx_yippee"),
+        sfx_sus: document.getElementById("sfx_sus")
+    };
+
+    // Prevent these three from blowing the users eardrums out
+    sounds.sfx_uhm.volume = 0.5;
+    sounds.sfx_gremlin.volume = 0.5;
+    sounds.sfx_bleh.volume = 0.5;
+    sounds.sfx_meow.volume = 0.5;
+    sounds.sfx_mewo.volume = 0.5;
+    sounds.sfx_clown.volume = 0.5;
+    sounds.sfx_yippee.volume = 0.75;
+
+    const soundOptions = Object.values(sounds);
 
     logoElements.forEach(logo => {
         logo.addEventListener("mouseenter", () => {
-            // Randomly choose which sound to play
-            const soundToPlay = Math.random() < 0.5 ? hiLongSound : yaySound;
-
-            soundToPlay.currentTime = 0; // rewind to start
+            const soundToPlay = soundOptions[Math.floor(Math.random() * soundOptions.length)];
+            soundToPlay.currentTime = 0;
             soundToPlay.play().catch(err => {
                 console.warn("Playback prevented:", err);
             });
         });
     });
 });
-
 
 // hotbar animations (hover wiggle and click shake)
 document.addEventListener("DOMContentLoaded", () => {

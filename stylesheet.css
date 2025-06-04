@@ -407,7 +407,7 @@ footer p {
     align-self: center;
     width:7vw;
     height:10vh;
-    margin:5vh;
+    margin-top:3vh;
 
 }
 
@@ -426,6 +426,47 @@ footer p {
     width:7vw;
     height:10vh;
 }
+
+.music_player {
+    background:url(images/grammophone.webp) no-repeat center center;
+    background-size:contain;
+    /*display: block;*/
+    width:7vw;
+    height:10vh;
+    display: inline-block;
+
+}
+
+.song_display {
+    font-family:Comic Sans MS, serif;
+    color:#d80085;
+    justify-self: center;
+    text-align:center;
+    padding-bottom: 3vh;
+    margin-top:0;
+}
+
+#song_title {
+    font-weight: bold;
+
+}
+
+#song_album {
+    font-size: 0.85rem;
+    color: #d80085;
+    margin-top: 2px;
+    --fa-primary-color: #d80085;
+    --fa-secondary-color: #d80085;
+
+}
+
+.credits_line {
+    display:flex;
+    justify-self: center;
+    gap:5px;
+    align-items: center;
+}
+
 
 /*
 .bongos:hover {

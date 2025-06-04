@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // hotbar animations (hover wiggle and click shake)
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".bongos, .project_link, .wallclock, .logo, .social_link");
+    const elements = document.querySelectorAll(".bongos, .project_link, .wallclock, .logo, .social_link, .music_player");
 
     elements.forEach(elem => {
         // Hover animation with random rotation
@@ -213,3 +213,109 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// music playr in hotbar
+document.addEventListener("DOMContentLoaded", () => {
+    const musicButtons = document.querySelectorAll(".music_player");
+    const songDisplay = document.getElementById("song_display");
+
+    // animation that plays while playing a song
+    const swayBounce = gsap.timeline({
+        repeat: -1,
+        yoyo: true,
+        paused: true,
+        defaults: {
+            duration: 0.7,
+            ease: "power1.inOut",
+            transformOrigin: "bottom center"
+        }
+    });
+
+    swayBounce
+        .to(".music_player", { rotation: 5, y: -2 })
+        .to(".music_player", { rotation: -5, y: 2 });
+
+    // playlist
+    const playlist = [
+
+        { id: "msc_abandoned_arcade_by_sternens_lapis", name: '"Abandoned Arcade" by Sternens Lapis', album: "Improv Album" },
+        { id: "msc_bhava_by_sternens_lapis", name: '"Bhava" by Sternens Lapis', album: "Improv Album"},
+        { id: "msc_darkness_before_dawn_by_sternens_lapis", name: '"Darkness Before Dawn" by Sternens Lapis', album: "Improv Album" },
+        { id: "msc_evys_theme_by_sternens_lapis", name: `"Evy's Theme" by Sternens Lapis`, album: "BOSSFIGHT OST" },
+        { id: "msc_floccinaucinihilipilification_by_sternens_lapis", name: `"Floccinaucinihilipilification" by Sternens Lapis`, album: "Memory Mortuarium" },
+        { id: "msc_hyohaku-sai-iri_banana_by_sternens_lapis", name: `"Hyōhaku-zai-iri banana (漂白剤入りバナナ)" by Sternens Lapis`, album: "Improv Album" },
+        { id: "msc_unnamed_chipsynth_by_sternens_lapis", name: `"Unnamed Chipsynth" by Sternens Lapis`, album: "Improv Album" },
+        { id: "msc_unused_theme_1_by_sternens_lapis", name: '"Unused Theme 1" by Sternens Lapis"', album: "BOSSFIGHT OST" },
+        { id: "msc_wrong_6_oclock_by_sternens_lapis", name: `"Wrong 6 O'clock" by Sternens Lapis`, album: "Memory Mortuarium" },
+        { id: "msc_athazagoraphobia_by_sternens_lapis", name: `"Athazagoraphobia (Music_Mix)" by Sternens Lapis`, album: "Memory Mortuarium"},
+        { id: "sfx_nokia", name: `"Espionage" by Nokia Sound Team`, album: `Nokia Ringtones Library` },
+    ];
+
+    const songs = playlist.map(track => document.getElementById(track.id));
+    let currentIndex = -1;
+    let currentAudio = null;
+
+    // update the player icon based on the state of the music player
+    function updateBackground(isPlaying) {
+        musicButtons.forEach(button => {
+            button.style.background = isPlaying
+                ? "url(images/grammophone_skip.webp) no-repeat center center"
+                : "url(images/grammophone.webp) no-repeat center center";
+            button.style.backgroundSize = "contain";
+        });
+    }
+
+    function updateSongDisplay(name, album) {
+        const titleEl = document.getElementById("song_title");
+        const albumEl = document.getElementById("song_album");
+
+        if (titleEl && albumEl) {
+
+            setTimeout(() => {
+                titleEl.textContent = `Now Playing: ${name}`;
+                albumEl.textContent = `Album: ${album}`;
+
+            })
+        }
+    }
+
+    musicButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Stop current audio if actively playing
+            if (currentAudio && !currentAudio.paused) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+
+            currentIndex++; // advance to next array item
+
+            if (currentIndex < songs.length) {
+                currentAudio = songs[currentIndex];
+                currentAudio.play().catch(err => {
+                    console.warn("Playback blocked:", err);
+                });
+
+                currentAudio.play().catch(err => {
+                    console.warn("Playback blocked:", err);
+                });
+
+                // Stop animation when current song ends
+                currentAudio.onended = () => {
+                    swayBounce.pause(0); // stop and reset
+                    updateSongDisplay("None", "—");
+
+                };
+
+                updateBackground(true);
+                updateSongDisplay(playlist[currentIndex].name, playlist[currentIndex].album);
+                swayBounce.play(); // start swaying
+            } else {
+                // Reset
+                currentIndex = -1;
+                currentAudio = null;
+                updateBackground(false);
+                updateSongDisplay("None", "—");
+                swayBounce.pause(0); // stop and reset sway
+            }
+        });
+    });
+});

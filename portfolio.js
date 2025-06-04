@@ -218,8 +218,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const musicButtons = document.querySelectorAll(".music_player");
     const songDisplay = document.getElementById("song_display");
 
-    // animation that plays while playing a song
+    // animate the grammophone while playing a song
     const swayBounce = gsap.timeline({
+        repeat: -1,
+        yoyo: true,
+        paused: true,
+        defaults: {
+            duration: 0.7,
+            ease: "power1.inOut",
+            transformOrigin: "bottom center"
+        }
+
+
+    });
+
+    swayBounce
+        .to(".music_player", { rotation: 5, y: -2 })
+        .to(".music_player", { rotation: -5, y: 2 });
+
+    // make pagedoll do a little dance :3
+    const pagedollDance = gsap.to(".pagedoll", {
+        scaleY: 1.1,
+        transformOrigin: "bottom center",
+        duration: 0.7,
+        ease: "elastic.out(1, 0.5)",
+        yoyo: true,
+        repeat: -1,
+        paused: true
+    });
+
+
+    // Make logo do a dance too :3
+    const logoSway = gsap.timeline({
         repeat: -1,
         yoyo: true,
         paused: true,
@@ -230,9 +260,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    swayBounce
-        .to(".music_player", { rotation: 5, y: -2 })
-        .to(".music_player", { rotation: -5, y: 2 });
+    logoSway
+        .to(".logo", { rotation: 5, y: -2 })
+        .to(".logo", { rotation: -5, y: 3 });
+
 
     // playlist
     const playlist = [
@@ -301,6 +332,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Stop animation when current song ends
                 currentAudio.onended = () => {
                     swayBounce.pause(0); // stop and reset
+                    pagedollDance.pause(0);
+                    logoSway.pause(0);
                     updateSongDisplay("None", "—");
 
                 };
@@ -308,6 +341,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateBackground(true);
                 updateSongDisplay(playlist[currentIndex].name, playlist[currentIndex].album);
                 swayBounce.play(); // start swaying
+                pagedollDance.play();
+                logoSway.play();
             } else {
                 // Reset
                 currentIndex = -1;

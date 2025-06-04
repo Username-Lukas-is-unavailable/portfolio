@@ -165,6 +165,8 @@ aside{
     background-size:contain;
     height:10vh;
     width:8vw;
+    display: inline-block;
+    transform-origin: bottom center;
 
 
 }

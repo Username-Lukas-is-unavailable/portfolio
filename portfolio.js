@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // hotbar animations (hover wiggle and click shake)
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".bongos, .project_link, .wallclock, .logo, .social_link, .music_player");
+    const elements = document.querySelectorAll(".bongos, .project_link, .wallclock, .logo, .social_link, .music_player, .nav_img, .page_down");
 
     elements.forEach(elem => {
         // Hover animation with random rotation
@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "msc_wrong_6_oclock_by_sternens_lapis", name: `"Wrong 6 O'clock" by Sternens Lapis`, album: "Memory Mortuarium" },
         { id: "msc_floccinaucinihilipilification_by_sternens_lapis", name: `"Floccinaucinihilipilification" by Sternens Lapis`, album: "Memory Mortuarium" },
         { id: "msc_abandoned_arcade_by_sternens_lapis", name: '"Abandoned Arcade" by Sternens Lapis', album: "Improv Album" },
-        { id: "msc_athazagoraphobia_by_sternens_lapis", name: `"Athazagoraphobia (Music_Mix)" by Sternens Lapis`, album: "Memory Mortuarium"},
+        { id: "msc_athazagoraphobia_by_sternens_lapis", name: `"Athazagoraphobia (Music Mix)" by Sternens Lapis`, album: "Memory Mortuarium"},
         { id: "msc_darkness_before_dawn_by_sternens_lapis", name: '"Darkness Before Dawn" by Sternens Lapis', album: "Improv Album" },
         { id: "msc_unused_theme_1_by_sternens_lapis", name: '"Unused Theme 1" by Sternens Lapis"', album: "BOSSFIGHT OST" },
         { id: "sfx_nokia", name: `"Espionage" by Nokia Sound Team`, album: `Nokia Ringtones Library` },
@@ -291,6 +291,15 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.background = isPlaying
                 ? "url(images/grammophone_skip.webp) no-repeat center center"
                 : "url(images/grammophone.webp) no-repeat center center";
+            button.style.backgroundSize = "contain";
+        });
+    }
+
+    function updateBackgroundPause(isPaused) {
+        musicButtons.forEach(button => {
+            button.style.background = isPaused
+                ? "url(images/grammophone_paused.webp) no-repeat center center"
+                : "url(images/grammophone_skip.webp) no-repeat center center";
             button.style.backgroundSize = "contain";
         });
     }
@@ -335,6 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     pagedollDance.pause(0);
                     logoSway.pause(0);
                     updateSongDisplay("None", "—");
+                    updateBackgroundPause(true);
 
                 };
 
@@ -348,6 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 currentIndex = -1;
                 currentAudio = null;
                 updateBackground(false);
+                updateBackgroundPause(false);
                 updateSongDisplay("None", "—");
                 swayBounce.pause(0); // stop and reset sway
                 pagedollDance.pause(0);

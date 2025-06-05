@@ -47,6 +47,23 @@ header {
     position:relative;
 }
 
+#header_portfolio {
+    height:calc(100vh - 80px);
+    margin-bottom:150px;
+    padding-bottom:400px;
+
+    background-image:url("./images/portfolio_banner.png");
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+}
+
 nav{
     padding:20px;
     width:100%;
@@ -73,6 +90,9 @@ nav{
     width:auto;*/
     max-width: 60%;
     height: auto;
+    display:inline-block;
+    transform-origin: center center;
+
 }
 
 #LOs {
@@ -157,6 +177,8 @@ aside{
     justify-self: center;
     align-self:center;
     margin-top:5%;
+
+    transform-origin: center center;
 
 }
 

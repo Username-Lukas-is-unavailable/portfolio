@@ -268,16 +268,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // playlist
     const playlist = [
 
-        { id: "msc_abandoned_arcade_by_sternens_lapis", name: '"Abandoned Arcade" by Sternens Lapis', album: "Improv Album" },
         { id: "msc_bhava_by_sternens_lapis", name: '"Bhava" by Sternens Lapis', album: "Improv Album"},
-        { id: "msc_darkness_before_dawn_by_sternens_lapis", name: '"Darkness Before Dawn" by Sternens Lapis', album: "Improv Album" },
         { id: "msc_evys_theme_by_sternens_lapis", name: `"Evy's Theme" by Sternens Lapis`, album: "BOSSFIGHT OST" },
-        { id: "msc_floccinaucinihilipilification_by_sternens_lapis", name: `"Floccinaucinihilipilification" by Sternens Lapis`, album: "Memory Mortuarium" },
         { id: "msc_hyohaku-sai-iri_banana_by_sternens_lapis", name: `"Hyōhaku-zai-iri banana (漂白剤入りバナナ)" by Sternens Lapis`, album: "Improv Album" },
         { id: "msc_unnamed_chipsynth_by_sternens_lapis", name: `"Unnamed Chipsynth" by Sternens Lapis`, album: "Improv Album" },
-        { id: "msc_unused_theme_1_by_sternens_lapis", name: '"Unused Theme 1" by Sternens Lapis"', album: "BOSSFIGHT OST" },
         { id: "msc_wrong_6_oclock_by_sternens_lapis", name: `"Wrong 6 O'clock" by Sternens Lapis`, album: "Memory Mortuarium" },
+        { id: "msc_floccinaucinihilipilification_by_sternens_lapis", name: `"Floccinaucinihilipilification" by Sternens Lapis`, album: "Memory Mortuarium" },
+        { id: "msc_abandoned_arcade_by_sternens_lapis", name: '"Abandoned Arcade" by Sternens Lapis', album: "Improv Album" },
         { id: "msc_athazagoraphobia_by_sternens_lapis", name: `"Athazagoraphobia (Music_Mix)" by Sternens Lapis`, album: "Memory Mortuarium"},
+        { id: "msc_darkness_before_dawn_by_sternens_lapis", name: '"Darkness Before Dawn" by Sternens Lapis', album: "Improv Album" },
+        { id: "msc_unused_theme_1_by_sternens_lapis", name: '"Unused Theme 1" by Sternens Lapis"', album: "BOSSFIGHT OST" },
         { id: "sfx_nokia", name: `"Espionage" by Nokia Sound Team`, album: `Nokia Ringtones Library` },
     ];
 
@@ -350,6 +350,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateBackground(false);
                 updateSongDisplay("None", "—");
                 swayBounce.pause(0); // stop and reset sway
+                pagedollDance.pause(0);
+                logoSway.pause(0);
             }
         });
     });

@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
         musicButtons.forEach(button => {
             button.style.background = isPaused
                 ? "url(images/grammophone_paused.webp) no-repeat center center"
-                : "url(images/grammophone_skip.webp) no-repeat center center";
+                : "url(images/grammophone.webp) no-repeat center center";
             button.style.backgroundSize = "contain";
         });
     }
@@ -348,6 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 };
 
+                updateBackgroundPause(false);
                 updateBackground(true);
                 updateSongDisplay(playlist[currentIndex].name, playlist[currentIndex].album);
                 swayBounce.play(); // start swaying

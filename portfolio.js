@@ -84,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
 // Logo (in navbar) SFX
 document.addEventListener("DOMContentLoaded", () => {
     const logoElements = document.querySelectorAll(".logo");
@@ -133,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // hotbar animations (hover wiggle and click shake)
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".bongos, .project_link, .wallclock, .logo, .social_link, .music_player, .nav_img, .page_down");
+    const elements = document.querySelectorAll(".bongos, .project_link, .wallclock, .logo, .social_link, .music_player, .nav_img, .page_down, .song_stop_button");
 
     elements.forEach(elem => {
         // Hover animation with random rotation
@@ -320,13 +322,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     musicButtons.forEach(button => {
         button.addEventListener("click", () => {
-            // Stop current audio if actively playing
+            // Stop current song if applicable
             if (currentAudio && !currentAudio.paused) {
                 currentAudio.pause();
                 currentAudio.currentTime = 0;
             }
 
-            currentIndex++; // advance to next array item
+            currentIndex++; // skip song (next array item)
 
             if (currentIndex < songs.length) {
                 currentAudio = songs[currentIndex];
@@ -338,13 +340,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.warn("Playback blocked:", err);
                 });
 
-                // Stop animation when current song ends
+                // Stop animations when song ends
                 currentAudio.onended = () => {
                     swayBounce.pause(0); // stop and reset
                     pagedollDance.pause(0);
                     logoSway.pause(0);
                     updateSongDisplay("None", "—");
                     updateBackgroundPause(true);
+                    stopButtons.forEach(btn => btn.classList.remove("active"));
 
                 };
 
@@ -354,7 +357,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 swayBounce.play(); // start swaying
                 pagedollDance.play();
                 logoSway.play();
-            } else {
+                stopButtons.forEach(btn => btn.classList.add("active"));
+            }
+
+            else {
                 // Reset
                 currentIndex = -1;
                 currentAudio = null;
@@ -367,4 +373,50 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // stop button (highly requested feature)
+    const stopButtons = document.querySelectorAll(".song_stop_button");
+    const ejectSound = document.getElementById("sfx_song_stop");
+    const switchSound = document.getElementById("sfx_switch");
+
+
+    stopButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            if (currentAudio && !currentAudio.paused) { // If song is actively playing
+                // Play an eject cassette sound even though it's themed after a grammophone
+                ejectSound.currentTime = 0;
+                ejectSound.play().catch(err => {
+                    console.warn("Sound playback blocked:", err);
+                });
+
+                // The part where it actually stops the song
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+
+            else {
+                // Play the other sound when no song is currently playing
+                switchSound.currentTime = 0;
+                switchSound.play().catch(err => {
+                    console.warn("Sound playback blocked:", err);
+                });
+            }
+
+
+            // Resetting all the animations and reverting the UI stuff to default
+            swayBounce.pause(0);
+            pagedollDance.pause(0);
+            logoSway.pause(0);
+            updateSongDisplay("None", "—");
+            updateBackground(false);
+            updateBackgroundPause(false);
+            stopButtons.forEach(btn => btn.classList.remove("active"));
+
+            // Reset index
+            currentIndex = -1;
+            currentAudio = null;
+        });
+    });
+
 });
+

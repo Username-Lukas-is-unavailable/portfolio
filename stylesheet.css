@@ -392,7 +392,6 @@ section#portfolio_section>h2 {
 
 
 
-
 footer {
     min-height:10vh;
     background-color:#BEACFF;
@@ -491,6 +490,41 @@ footer p {
     align-items: center;
 }
 
+.song_stop_button {
+    color:#d80085;
+    display: block;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    bottom:2vh;
+    font-size:20px;
+    padding: 3px;
+
+    border-radius: 360px;
+    transition: background-color;
+    transition-duration: 0.5s;
+
+
+}
+/*
+.song_stop_button:hover {
+    color:#d80085;
+}*/
+
+.song_stop_button.active {
+    color: #BEACFF; /* turns the established clickable colour while a song is playing */
+    background-color: white;
+    border-radius: 360px;
+    height: 110%;
+    padding: 3px;
+    transition: background-color;
+    transition-duration: 0.5s;
+}
+
+.song_stop_button.active:hover {
+    color:#d80085;
+    background-color: white;
+}
 
 /*
 .bongos:hover {

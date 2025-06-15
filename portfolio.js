@@ -25,7 +25,7 @@ heading.addEventListener("mouseenter", () => {
 
 // Click SFX for Navbar + Pagedown + Logo + project list items
 document.addEventListener("DOMContentLoaded", () => {
-    const clickableElements = document.querySelectorAll(".nav_img, .logo, .page_down, .project_item a, .bongos");
+    const clickableElements = document.querySelectorAll(".nav_img, .logo, .page_down, .project_item a, .bongos, .lo_nav_item");
     const clickSound = document.getElementById("sfx_ui_press");
 
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // hotbar animations (hover wiggle and click shake)
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".bongos, .project_link, .wallclock, .logo, .social_link, .music_player, .nav_img, .page_down, .song_stop_button");
+    const elements = document.querySelectorAll(".bongos, .project_link, .wallclock, .logo, .social_link, .music_player, .nav_img, .page_down, .song_stop_button, .lo_nav_item");
 
     elements.forEach(elem => {
         // Hover animation with random rotation
@@ -420,3 +420,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            content.style.marginTop = "0";
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.marginTop = "5%";
+        }
+    });
+}

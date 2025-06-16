@@ -382,6 +382,21 @@ section#portfolio_section {
     color:#d80085;
 }
 
+.centered_link {
+    font-family:"Comic Sans MS", serif;
+    color: #7a66cc;
+    text-align:center;
+    display:flex;
+    justify-self: center;
+    font-size:3vh;
+    margin-bottom:5vh;
+}
+
+.centered_link:hover {
+    color:#d80085;
+}
+
+
 #portfolio_section embed {
     justify-self: center;
     display:flex;
@@ -419,6 +434,8 @@ section#portfolio_section>h2 {
     scroll-margin-top: 16vh;
 
 }
+
+#hotbar_section { scroll-margin-top: 16vh; }
 
 #portfolio_section hr {
     width:33vw;

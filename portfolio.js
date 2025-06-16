@@ -25,7 +25,7 @@ heading.addEventListener("mouseenter", () => {
 
 // Click SFX for Navbar + Pagedown + Logo + project list items
 document.addEventListener("DOMContentLoaded", () => {
-    const clickableElements = document.querySelectorAll(".nav_img, .logo, .page_down, .project_item a, .bongos, .lo_nav_item");
+    const clickableElements = document.querySelectorAll(".nav_img, .logo, .page_down, .project_item a, .bongos, .lo_nav_item, .collapsible");
     const clickSound = document.getElementById("sfx_ui_press");
 
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();

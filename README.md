@@ -9,6 +9,20 @@ It's designed to invoke a similar feeling to old personal websites and/or MySpac
 
 A list of project updates and their additions and changes.
 
+### 1.5.8 - Portfolio Update - Projects and LO Updates
+
+_Added more content to the LO page, plus updates to the Projects section on the Homepage_
+
+- Added more LO1 and LO2 content
+- Added the Dead Man's Switch to the projects section on the Homepage.
+
+Notes:
+- Favicon seems to have stopped working? I do not know why? I didn't touch any of the favicon code?? T-T
+
+
+<small>_16 June 2025_</small>
+<hr>
+
 ### 1.5.7 - Portfolio Update - ReadMe
 
 _I discovered recently that I hadn't been updating the ReadMe file with these commit messages. So I've added the information from these commit messages to the ReadMe file._
@@ -216,6 +230,7 @@ _I discovered recently that I hadn't been updating the ReadMe file with these co
 
   - Added a missing space in the footer's text.
     - Fixed the pdf embed (A capitalisation issue broke the embed in the previous version (1.2) )
+  - Added a robots.txt file
 
 <small>_2 June 2025_</small>
 <hr>

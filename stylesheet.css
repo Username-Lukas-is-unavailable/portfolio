@@ -437,6 +437,11 @@ section#portfolio_section>h2 {
 
 #hotbar_section { scroll-margin-top: 16vh; }
 
+.lo_main i {
+    font-size:1.5vh;
+    vertical-align: super;
+}
+
 #portfolio_section hr {
     width:33vw;
     justify-self: center;
@@ -592,6 +597,11 @@ section#portfolio_section>h2 {
     height:auto;
     margin-bottom: 3vh;
     padding: 5%;
+}
+
+#deadmansswitch {
+    max-width:87%;
+    padding: 0;
 }
 
 .project_item img:hover {

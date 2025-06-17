@@ -1,5 +1,5 @@
 window.addEventListener(
-    "scroll",                 //Scroll animation for buttons
+    "scroll",                 //Scroll animation for spinning elements and buttons (currently unused)
     () => {
         document.body.style.setProperty(
             "--scroll",
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.backgroundSize = "contain";
         });
     }
-
+// update the gramophone icon
     function updateBackgroundPause(isPaused) {
         musicButtons.forEach(button => {
             button.style.background = isPaused
@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.backgroundSize = "contain";
         });
     }
-
+//update the song details
     function updateSongDisplay(name, album) {
         const titleEl = document.getElementById("song_title");
         const albumEl = document.getElementById("song_album");

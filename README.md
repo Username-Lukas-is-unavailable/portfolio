@@ -9,7 +9,19 @@ It's designed to invoke a similar feeling to old personal websites and/or MySpac
 
 A list of project updates and their additions and changes.
 
-### 1.5.11 - Portfolio Update - More ReadMe Files and small DMS update
+### 1.5.12 - Portfolio Update - LO4 Update
+
+_I have added a bunch more content to LO4._
+
+- Added more images and folders to the newly added lo folder in the images folder, housing specifically the images for the LO page.
+- Added Research and Feedback documentation to LO4.
+- Changed the text on the Green state button on the DMS page after user feedback.
+
+<small>_17 June 2025_</small>
+<hr>
+
+
+### 1.5.11 - Portfolio Update - More ReadMe Files and small DMS Update
 
 _A small update adding README files to the dead-mans-switch folder and the belco_website folder, as well as adding new folders for tidily storing the DMS image and audio files in separate folders._
 

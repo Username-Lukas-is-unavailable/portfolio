@@ -482,6 +482,14 @@ section#portfolio_section>h2 {
     pointer-events: none;
 }
 
+.lo_content video {
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    max-width:70%;
+    height:auto;
+}
+
 .portfolio_section2 {
     background-color:#FFD3E6;
     padding:8%;

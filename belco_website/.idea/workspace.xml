@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3474f15c-661f-451a-9c68-bec803671a88" name="Changes" comment="28 May - Final Touches&#10;&#10;- Final Touches&#10;&#10;&#10;Due to time constraints some things are unfinished:&#10;- Alignment (padding/margins) are sometimes inconsistent across the site. &#10;- List of Partners and List of Schools are incomplete.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partnerinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/partnerinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Username-Lukas-is-unavailable&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Username-Lukas-is-unavailable/Belco&quot;,
+    &quot;accountId&quot;: &quot;1f1cff65-dca2-4359-baf5-2485e9c7f5b4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2wlA3h5ZSIOMlpOsPutVKHX0Byp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lukas\Documents\!Fontys\Belco\images" />
+      <recent name="C:\Users\lukas\Documents\!Fontys\Belco" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3474f15c-661f-451a-9c68-bec803671a88" name="Changes" comment="" />
+      <created>1746605588864</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746605588864</updated>
+      <workItem from="1746605590001" duration="24239000" />
+      <workItem from="1747903176385" duration="67712000" />
+      <workItem from="1748419241229" duration="3972000" />
+      <workItem from="1748617713070" duration="4336000" />
+    </task>
+    <task id="LOCAL-00001" summary="First draft of the project">
+      <option name="closed" value="true" />
+      <created>1746605741581</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746605741581</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First draft of the project">
+      <option name="closed" value="true" />
+      <created>1746605842255</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746605842255</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First draft of the project">
+      <option name="closed" value="true" />
+      <created>1746606358570</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746606358570</updated>
+    </task>
+    <task id="LOCAL-00004" summary="second draft of the project (sequel)">
+      <option name="closed" value="true" />
+      <created>1746606382103</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746606382103</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- Improved the layout of the nav bar&#10;- Made Navbar links responsive&#10;- Added a banner image&#10;- Added a Footer&#10;- Added colour according to design">
+      <option name="closed" value="true" />
+      <created>1747145726437</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747145726437</updated>
+    </task>
+    <task id="LOCAL-00006" summary="- Added main content&#10;- Added layout for main content&#10;- fixed header issues&#10;- fixed z-index issues&#10;- fixed footer issues">
+      <option name="closed" value="true" />
+      <created>1748270997985</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748270997985</updated>
+    </task>
+    <task id="LOCAL-00007" summary="- Added List Of Schools page content&#10;- Added Partner Information page&#10;- Added Contact Page&#10;- Fixed issue where the logo didn't direct to the homepage&#10;- Fixed the navbar not working on other pages&#10;- Added buttons (links) to the homepage&#10;&#10;TO DO:&#10;- Add About Us page or remove homepage button&#10;- Make padding consistent sidewide&#10;- Maybe expand the list of partners&#10;- Maybe add bakground detail">
+      <option name="closed" value="true" />
+      <created>1748360136814</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748360136814</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- Tested on presentation screen&#10;- Renamed List Of Schools page to Exchange Programs&#10;- Started adding background detail&#10;&#10;TO DO:&#10;- Add About Us page or remove homepage button&#10;- Make padding consistent sitewide&#10;- Maybe expand the list of partners&#10;&#10;&#10;&#10;Low Priority:&#10;- Host on a webserver">
+      <option name="closed" value="true" />
+      <created>1748361935310</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748361935310</updated>
+    </task>
+    <task id="LOCAL-00009" summary="27 May&#10;&#10;Additions:&#10;- Added About Us page&#10;- Added background detail&#10;- Cleaned up CSS and HTML&#10;- Minor Fixes&#10;&#10;&#10;TO DO:&#10;- Make padding consistent sitewide&#10;- Maybe expand the list of partners&#10;&#10;&#10;Low Priority:&#10;- Host on a webserver">
+      <option name="closed" value="true" />
+      <created>1748374461736</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748374461736</updated>
+    </task>
+    <task id="LOCAL-00010" summary="28 May - Final Touches&#10;&#10;- Final Touches&#10;&#10;&#10;Due to time constraints some things are unfinished:&#10;- Alignment (padding/margins) are sometimes inconsistent across the site. &#10;- List of Partners and List of Schools are incomplete.">
+      <option name="closed" value="true" />
+      <created>1748417374640</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748417374640</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First draft of the project" />
+    <MESSAGE value="second draft of the project (sequel)" />
+    <MESSAGE value="- Improved the layout of the nav bar&#10;- Made Navbar links responsive&#10;- Added a banner image&#10;- Added a Footer&#10;- Added colour according to design" />
+    <MESSAGE value="- Added main content&#10;- Added layout for main content&#10;- fixed header issues&#10;- fixed z-index issues&#10;- fixed footer issues" />
+    <MESSAGE value="- Added List Of Schools page content&#10;- Added Partner Information page&#10;- Added Contact Page&#10;- Fixed issue where the logo didn't direct to the homepage&#10;- Fixed the navbar not working on other pages&#10;- Added buttons (links) to the homepage&#10;&#10;TO DO:&#10;- Add About Us page or remove homepage button&#10;- Make padding consistent sidewide&#10;- Maybe expand the list of partners&#10;- Maybe add bakground detail" />
+    <MESSAGE value="- Tested on presentation screen&#10;- Renamed List Of Schools page to Exchange Programs&#10;- Started adding background detail&#10;&#10;TO DO:&#10;- Add About Us page or remove homepage button&#10;- Make padding consistent sitewide&#10;- Maybe expand the list of partners&#10;&#10;&#10;&#10;Low Priority:&#10;- Host on a webserver" />
+    <MESSAGE value="27 May&#10;&#10;Additions:&#10;- Added About Us page&#10;- Added background detail&#10;- Cleaned up CSS and HTML&#10;- Minor Fixes&#10;&#10;&#10;TO DO:&#10;- Make padding consistent sitewide&#10;- Maybe expand the list of partners&#10;&#10;&#10;Low Priority:&#10;- Host on a webserver" />
+    <MESSAGE value="28 May - Final Touches&#10;&#10;- Final Touches&#10;&#10;&#10;Due to time constraints some things are unfinished:&#10;- Alignment (padding/margins) are sometimes inconsistent across the site. &#10;- List of Partners and List of Schools are incomplete." />
+    <option name="LAST_COMMIT_MESSAGE" value="28 May - Final Touches&#10;&#10;- Final Touches&#10;&#10;&#10;Due to time constraints some things are unfinished:&#10;- Alignment (padding/margins) are sometimes inconsistent across the site. &#10;- List of Partners and List of Schools are incomplete." />
+  </component>
+</project>

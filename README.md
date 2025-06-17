@@ -9,6 +9,52 @@ It's designed to invoke a similar feeling to old personal websites and/or MySpac
 
 A list of project updates and their additions and changes.
 
+### 1.5.11 - Portfolio Update - More ReadMe Files and small DMS update
+
+_A small update adding README files to the dead-mans-switch folder and the belco_website folder, as well as adding new folders for tidily storing the DMS image and audio files in separate folders._
+
+- Added missing README files
+  - Added README.md to the dead-mans-switch folder, housing the Dead Man's Switch project
+    - It features: 
+      - Project description
+      - Changelog
+      - Roadmap
+    - Missing older versions from 2022.
+  - Added README.md to belco_website folder, housing the Belco Alliance project
+    - It features:
+      - Project description
+      - Changelog
+      - Roadmap
+ 
+- Updated the Dead Man's Switch (DMS) project with a small update and tidied the files.
+  - Added icons to the Total Time and High Score fields.
+  - Organised the files.
+      - Images are now in a separate folder
+      - Audio files are now in a separate folder
+  - Added a README file to the dead-mans-switch folder
+  - Removed some unnecessary files
+      - Twitter icon is no longer needed. It has been replaced with a bsky link.
+      - It is still known internally as class name/id twitter.
+
+<small>_17 June 2025_</small>
+<hr>
+
+
+### 1.5.10 - Portfolio Update - LO Images Fix
+
+_Fixed issues with some external files that had stopped working._
+
+- Fixed the images that relied on discord's servers for storage that stopped working.
+  - These files are now uploaded under /images/lo/...
+- Fixed the pdf download link
+
+Notes:
+- I really thought these would last longer but apparently not. Punished for my hubris. Should've listened to Mint's advice, lol...
+
+<small>_17 June 2025_</small>
+<hr>
+
+
 ### 1.5.9 - Portfolio Update - LO 3+4 added
 
 _Added more content to the LO page. LO4 is still a work in progress an LO5 is coming soon._

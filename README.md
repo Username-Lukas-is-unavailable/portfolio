@@ -9,6 +9,22 @@ It's designed to invoke a similar feeling to old personal websites and/or MySpac
 
 A list of project updates and their additions and changes.
 
+### 1.5.9 - Portfolio Update - LO 3+4 added
+
+_Added more content to the LO page. LO4 is still a work in progress an LO5 is coming soon._
+
+- Added more content to LO1 and LO2 sections
+- Added new LO3 and LO4 sections
+  - LO4 is still work in progress
+
+
+Notes:
+- Favicon is still broken. Not a high priority. Added to the roadmap.
+
+
+<small>_17 June 2025_</small>
+<hr>
+
 ### 1.5.8 - Portfolio Update - Projects and LO Updates
 
 _Added more content to the LO page, plus updates to the Projects section on the Homepage_
@@ -268,14 +284,17 @@ _I discovered recently that I hadn't been updating the ReadMe file with these co
 
 ## Roadmap
   - Add project and portfolio content properly, incl text and images
-    - I think I want to decorate the footer a little more.
-    - If I can find the time to, I want to add more little details to enhance the early 2000s personal website/myspace page feel.
-    - Images on the site are currently not optimised. I might want to optimise them for web use and implement them as webp files instead.
-    - There are a couple of warnings I need to get rid of 
-    - hr elements do not work consistently.
-    - Navbar elements show unintended visual behaviour when animated upon hover.
-    - It'd be cool if the Dead Man's Switch High-Scores could be stored server-side. This is very low priority though.
-    - I'd like an on-site changelog archive.
+  - I think I want to decorate the footer a little more.
+  - If I can find the time to, I want to add more little details to enhance the early 2000s personal website/myspace page feel.
+  - Images on the site are currently not optimised. I might want to optimise them for web use and implement them as webp files instead.
+  - There are a couple of warnings I need to get rid of 
+  - hr elements do not work consistently.
+  - Navbar elements show unintended visual behaviour when animated upon hover.
+  - It'd be cool if the Dead Man's Switch High-Scores could be stored server-side. This is very low priority though.
+  - I'd like an on-site changelog archive.
+  - I want to add a character to the Dead Man's Switch
+  - I want to use the unused scroll spinning element JS code for something still.
+  - Starting with version 1.5.8 the favicon stopped working. Not a high priority.
 
 ## Contributing
 I currently am not open to contributions. This is a personal project.

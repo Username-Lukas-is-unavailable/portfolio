@@ -9,6 +9,17 @@ It's designed to invoke a similar feeling to old personal websites and/or MySpac
 
 A list of project updates and their additions and changes.
 
+### 1.6.1 - Release candidate - Project Organisation
+
+_Added the missing 4.3) Project Organisation section._
+
+- Added LO4.3 - Project Organisation
+- Fixed an issue where the wrong date was listed for v1.6
+
+<small>_18 June 2025_</small>
+<hr>
+
+
 ### 1.6 - Release candidate - LO updates
 
 _I have added a bunch more content to all the LO's and have added LO5._
@@ -26,7 +37,7 @@ _I have added a bunch more content to all the LO's and have added LO5._
   - Reflection of the semester as a whole.
 - Fixed countless small issues, bugs and errors
 
-<small>_17 June 2025_</small>
+<small>_18 June 2025_</small>
 <hr>
 
 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Three.js + GSAP</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #ffc7fe
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #back {
+            position: absolute;
+            top: 550px;
+            left: 170px;
+            background-color: #BEACFF;
+            color: #ffffff;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 2vh;
+            margin-left: 1.5vw;
+            padding: .75vw;
+            font-family: "Comic Sans MS", serif;
+            border-radius: 5px;
+            box-shadow: 0 1.3vh #7a66cc;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        #back:hover {
+            background-color: #d80085;
+            box-shadow: 0 1.3vh #8a0055;
+        }
+
+        #back:active {
+            box-shadow: 0 0.6vh #653854;
+            transform: translateY(4px);
+            background-color: #8e3765;
+        }
+
+        .text {
+            position: absolute;
+            left: 55%;
+            top: 30%;
+            font-size: 3vh;
+            font-family: "Comic Sans MS", serif;
+            color: #8a0055;
+        }
+
+    </style>
+</head>
+<body>
+
+<a href="../index.html" id="back">🡄 Main Website</a>
+
+<p class="text">
+    During one of our development lectures<br>
+    I made a cube spin using Three.js and GSAP!
+    <br> Look at it go :3
+</p>
+
+<script type="module" src="index.js"></script>
+</body>
+</html>

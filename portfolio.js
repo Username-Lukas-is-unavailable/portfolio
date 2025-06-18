@@ -7,7 +7,6 @@ window.addEventListener(
         );
     },
     false
-
 );
 
 // Little hidden Lucy SFX
@@ -83,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 
 
 // Logo (in navbar) SFX
@@ -162,13 +160,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // Click shake animation
         elem.addEventListener("click", () => {
             gsap.timeline()
-                .to(elem, { scale: 1.3, duration: 0.1, ease: "power1.out" })
-                .to(elem, { x: -5, duration: 0.05 })
-                .to(elem, { x: 5, duration: 0.05 })
-                .to(elem, { x: -3, duration: 0.05 })
-                .to(elem, { x: 3, duration: 0.05 })
-                .to(elem, { x: 0, duration: 0.05 })
-                .to(elem, { scale: 1, duration: 0.1, ease: "power1.in" });
+                .to(elem, {scale: 1.3, duration: 0.1, ease: "power1.out"})
+                .to(elem, {x: -5, duration: 0.05})
+                .to(elem, {x: 5, duration: 0.05})
+                .to(elem, {x: -3, duration: 0.05})
+                .to(elem, {x: 3, duration: 0.05})
+                .to(elem, {x: 0, duration: 0.05})
+                .to(elem, {scale: 1, duration: 0.1, ease: "power1.in"});
         });
     });
 });
@@ -235,8 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     swayBounce
-        .to(".music_player", { rotation: 5, y: -2 })
-        .to(".music_player", { rotation: -5, y: 2 });
+        .to(".music_player", {rotation: 5, y: -2})
+        .to(".music_player", {rotation: -5, y: 2});
 
     // make pagedoll do a little dance :3
     const pagedollDance = gsap.to(".pagedoll", {
@@ -263,24 +261,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     logoSway
-        .to(".logo", { rotation: 5, y: -2 })
-        .to(".logo", { rotation: -5, y: 3 });
+        .to(".logo", {rotation: 5, y: -2})
+        .to(".logo", {rotation: -5, y: 3});
 
 
     // playlist
     const playlist = [
 
-        { id: "msc_bhava_by_sternens_lapis", name: '"Bhava" by Sternens Lapis', album: "Improv Album"},
-        { id: "msc_evys_theme_by_sternens_lapis", name: `"Evy's Theme" by Sternens Lapis`, album: "BOSSFIGHT OST" },
-        { id: "msc_hyohaku-sai-iri_banana_by_sternens_lapis", name: `"Hyōhaku-zai-iri banana (漂白剤入りバナナ)" by Sternens Lapis`, album: "Improv Album" },
-        { id: "msc_unnamed_chipsynth_by_sternens_lapis", name: `"Ré Nao" by Sternens Lapis`, album: "Improv Album" },
-        { id: "msc_wrong_6_oclock_by_sternens_lapis", name: `"Going to bed at the Wrong 6 O'Clock" by Sternens Lapis`, album: "Memory Mortuarium" },
-        { id: "msc_floccinaucinihilipilification_by_sternens_lapis", name: `"Floccinaucinihilipilification" by Sternens Lapis`, album: "Memory Mortuarium" },
-        { id: "msc_abandoned_arcade_by_sternens_lapis", name: '"Abandoned Arcade" by Sternens Lapis', album: "Improv Album" },
-        { id: "msc_athazagoraphobia_by_sternens_lapis", name: `"Athazagoraphobia (Music Mix)" by Sternens Lapis`, album: "Memory Mortuarium"},
-        { id: "msc_darkness_before_dawn_by_sternens_lapis", name: '"Darkness Before Dawn" by Sternens Lapis', album: "Improv Album" },
-        { id: "msc_unused_theme_1_by_sternens_lapis", name: '"Unused Theme 1" by Sternens Lapis"', album: "BOSSFIGHT OST" },
-        { id: "sfx_nokia", name: `"Espionage" by Nokia Sound Team`, album: `Nokia Ringtones Library` },
+        {id: "msc_bhava_by_sternens_lapis", name: '"Bhava" by Sternens Lapis', album: "Improv Album"},
+        {id: "msc_evys_theme_by_sternens_lapis", name: `"Evy's Theme" by Sternens Lapis`, album: "BOSSFIGHT OST"},
+        {
+            id: "msc_hyohaku-sai-iri_banana_by_sternens_lapis",
+            name: `"Hyōhaku-zai-iri banana (漂白剤入りバナナ)" by Sternens Lapis`,
+            album: "Improv Album"
+        },
+        {id: "msc_unnamed_chipsynth_by_sternens_lapis", name: `"Ré Nao" by Sternens Lapis`, album: "Improv Album"},
+        {
+            id: "msc_wrong_6_oclock_by_sternens_lapis",
+            name: `"Going to bed at the Wrong 6 O'Clock" by Sternens Lapis`,
+            album: "Memory Mortuarium"
+        },
+        {
+            id: "msc_floccinaucinihilipilification_by_sternens_lapis",
+            name: `"Floccinaucinihilipilification" by Sternens Lapis`,
+            album: "Memory Mortuarium"
+        },
+        {
+            id: "msc_abandoned_arcade_by_sternens_lapis",
+            name: '"Abandoned Arcade" by Sternens Lapis',
+            album: "Improv Album"
+        },
+        {
+            id: "msc_athazagoraphobia_by_sternens_lapis",
+            name: `"Athazagoraphobia (Music Mix)" by Sternens Lapis`,
+            album: "Memory Mortuarium"
+        },
+        {
+            id: "msc_darkness_before_dawn_by_sternens_lapis",
+            name: '"Darkness Before Dawn" by Sternens Lapis',
+            album: "Improv Album"
+        },
+        {
+            id: "msc_unused_theme_1_by_sternens_lapis",
+            name: '"Unused Theme 1" by Sternens Lapis"',
+            album: "BOSSFIGHT OST"
+        },
+        {id: "sfx_nokia", name: `"Espionage" by Nokia Sound Team`, album: `Nokia Ringtones Library`},
     ];
 
     const songs = playlist.map(track => document.getElementById(track.id));
@@ -296,6 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.backgroundSize = "contain";
         });
     }
+
 // update the gramophone icon
     function updateBackgroundPause(isPaused) {
         musicButtons.forEach(button => {
@@ -305,6 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.backgroundSize = "contain";
         });
     }
+
 //update the song details
     function updateSongDisplay(name, album) {
         const titleEl = document.getElementById("song_title");
@@ -358,9 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 pagedollDance.play();
                 logoSway.play();
                 stopButtons.forEach(btn => btn.classList.add("active"));
-            }
-
-            else {
+            } else {
                 // Reset
                 currentIndex = -1;
                 currentAudio = null;
@@ -392,9 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // The part where it actually stops the song
                 currentAudio.pause();
                 currentAudio.currentTime = 0;
-            }
-
-            else {
+            } else {
                 // Play the other sound when no song is currently playing
                 switchSound.currentTime = 0;
                 switchSound.play().catch(err => {
@@ -424,10 +448,10 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
+    coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
-        if (content.style.maxHeight){
+        if (content.style.maxHeight) {
             content.style.maxHeight = null;
             content.style.marginTop = "0";
         } else {

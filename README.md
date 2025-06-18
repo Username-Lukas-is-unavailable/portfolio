@@ -9,6 +9,27 @@ It's designed to invoke a similar feeling to old personal websites and/or MySpac
 
 A list of project updates and their additions and changes.
 
+### 1.6 - Release candidate - LO updates
+
+_I have added a bunch more content to all the LO's and have added LO5._
+
+- Added more documentation to the LO page
+- Removed unused projects fields
+- Added Animation Workshop files
+  - Cube animation with Three.js
+  - Falling leaves animation with GSAP
+- Prettified code
+- Added content to the portfolio page
+  - Introduction
+  - Links to the LO and Projects pages
+  - Link to ToyHouse for art portfolio
+  - Reflection of the semester as a whole.
+- Fixed countless small issues, bugs and errors
+
+<small>_17 June 2025_</small>
+<hr>
+
+
 ### 1.5.12 - Portfolio Update - LO4 Update
 
 _I have added a bunch more content to LO4._
@@ -352,7 +373,7 @@ _I discovered recently that I hadn't been updating the ReadMe file with these co
   - I'd like an on-site changelog archive.
   - I want to add a character to the Dead Man's Switch
   - I want to use the unused scroll spinning element JS code for something still.
-  - Starting with version 1.5.8 the favicon stopped working. Not a high priority.
+  - Starting with version 1.5.8 the favicon stopped working. Not a high priority. (seems to work fine on the live hosted version)
 
 ## Contributing
 I currently am not open to contributions. This is a personal project.

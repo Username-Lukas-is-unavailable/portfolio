@@ -1,0 +1,10 @@
+{
+  "name": "animating_using_gsap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "../portfolio/animation_workshop/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true
+}
